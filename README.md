@@ -1,19 +1,8 @@
 #Gradle Cucumber runner + Starting from the terminal
 
-
-## Запуск определенного теста по тегу.
+## gradle таска в которой прописываем путь к feature файлам 
 ```
-gradlew -Dcucumber.options="--tags @QA" clean cucumber
-```
-
-Меняем "import io.cucumber.java.en.*;" на "import cucumber.api.java.en.*;"
-Меняем "import io.cucumber.java.en.*;" на "import cucumber.api.java.en.*;"
-```
-import io.cucumber.java.en.*;
-
-    testImplementation 'io.cucumber:cucumber-java:5.1.3'
-    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '2.3.1'
-    testImplementation 'io.cucumber:cucumber-junit:5.1.3'
+    gradle -PpathToFeatureFiles=src/test/resources/dira cucumber
 ```
 
 Полезные ссылки
@@ -25,6 +14,8 @@ Gradle – [Учебник Gradle](https://coderlessons.com/tutorials/raznoe/vyu
 The Gradle Wrapper - [https://docs.gradle.org/current/userguide/gradle_wrapper.html]()
 
 Руководство: Cucumber + Java - [https://habr.com/ru/post/332754/]()
+
+Передача аргументов при вызове Gradle - [https://stackoverflow.com/questions/20410854/how-to-pass-parameters-or-arguments-into-a-gradle-task/26510706#26510706]()
 
 Основня ссылка была - [https://cucumber.io/docs/tools/java/#gradle]()
 
@@ -39,4 +30,21 @@ https://cucumber.io/docs/installation/java/
 
 The complete, and updated, instructions are availabe at the 
 [plugin portal](https://plugins.gradle.org/plugin/se.thinkcode.cucumber-runner).
+
+
+#
+
+### На потом
+#### Запуск определенного теста по тегу - !!!!??!?!?!?! под вопросом решение
+#### gradlew -Dcucumber.options="--tags @QA" clean cucumber
+###### Меняем "import io.cucumber.java.en.*;" на "import cucumber.api.java.en.*;"
+###### Меняем "import io.cucumber.java.en.*;" на "import cucumber.api.java.en.*;"
+```
+import io.cucumber.java.en.*;
+
+    testImplementation 'io.cucumber:cucumber-java:5.1.3'
+    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '2.3.1'
+    testImplementation 'io.cucumber:cucumber-junit:5.1.3'
+```
+
 1 - [qwerty]()

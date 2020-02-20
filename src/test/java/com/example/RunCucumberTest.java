@@ -5,6 +5,9 @@ import io.cucumber.junit.CucumberOptions;
 /*import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;*/
 import org.junit.runner.RunWith;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import exceptions.QAException;
 
 //import static cucumber.api.SnippetType.CAMELCASE;
 
@@ -24,4 +27,15 @@ import org.junit.runner.RunWith;
         dryRun=true)*/
 )
 public class RunCucumberTest {
+    @BeforeClass
+    public static void connectDB(){
+        System.out.println("BeforeClass");
+        throw new QAException("QAException_BeforeClass777");
+    }
+
+    @AfterClass
+    public static void disconnectDB(){
+        System.out.println("AfterClass");
+        throw new QAException("QAException_AfterClass777");
+    }
 }
