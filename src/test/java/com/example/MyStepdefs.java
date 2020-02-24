@@ -59,9 +59,4 @@ public class MyStepdefs {
     public void выполнитьСкриптНаполненияфффБдЗаписСПолем(String arg0, String arg1, String arg2, String arg3) {
         System.out.println("Со скобками шаги пиши аккуратно / Write carefully with brackets");
     }
-
-    @When("^Выполнить скрипт \"([^\"]*)\", наполнения бд \"([^\"]*)\" запис\\(ью/-ями\\) с полем \"([^\"]*)\" = \"([^\"]*)\"$")
-    public void выполнитьСкриптНаполненияБдЗаписЬюЯмиСПолем(String arg0, String arg1, String arg2, String arg3) throws Throwable {
-        System.out.println("WIN_777_111");
-    }
 }

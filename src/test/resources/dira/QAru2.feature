@@ -1,8 +1,8 @@
-Feature: Первый тест-кейс
-    @QA1
-    Scenario: Первый тест-кейс
+Feature: Второй тест-кейс
+    @QA2
+    Scenario: Второй тест-кейс
 
         #Комментарий
-        When step 1
-        Then Шаг 2
+        When step 111
+        Then Шаг 222
         When Выполнить скрипт "DIASOFT_TRADES_ADD_ONE", наполненияффф бд "1" запис с полем "flag" = "1"

@@ -22,6 +22,7 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-java:5.1.3'
     testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '2.3.1'
     testImplementation 'io.cucumber:cucumber-junit:5.1.3'
+    testCompile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
 }
 
 configurations {
@@ -36,8 +37,8 @@ task cucumber() {
         javaexec {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            //args = ['--plugin', 'pretty', '--glue', 'com.example', 'src/test/resources/dira']
-            args = ['--plugin', 'pretty', '--glue', 'com.example', pathToFeatureFiles ]
+            args = ['--plugin', 'pretty', '--strict', '--glue', 'com.example', 'src/test/resources/dira']
+            //args = ['--plugin', 'pretty', '--strict', '--glue', 'com.example', pathToFeatureFiles ]
         }
     }
 }

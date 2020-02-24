@@ -1,8 +1,15 @@
 #Gradle Cucumber runner + Starting from the terminal
 
-## gradle таска в которой прописываем путь к feature файлам 
+## Запуск ТОЛЬКО через таску gradle работает, а через junit-овский класс RunCucumberTest не работает - Стек ошибки ниже.... 
+
+
+### Запуск таски с параметром пути к папке с тест-кейсами
 ```
     gradle -PpathToFeatureFiles=src/test/resources/dira cucumber
+```
+### Запуск таски без папаметров
+```
+    gradle cucumber
 ```
 
 Полезные ссылки
@@ -32,8 +39,20 @@ The complete, and updated, instructions are availabe at the
 [plugin portal](https://plugins.gradle.org/plugin/se.thinkcode.cucumber-runner).
 
 
-#
 
+#
+##### Стек ошибки при запуске по unit-овскому классу RunCucumberTest...
+```
+
+Classes annotated with @RunWith(Cucumber.class) must not define any
+Step Definition or Hook methods. Their sole purpose is to serve as
+an entry point for JUnit. Step Definitions and Hooks should be defined
+in their own classes. This allows them to be reused across features.
+Offending class: class com.example.RunCucumberTest
+
+io.cucumber.core.exception.CucumberException: 
+```
+##
 ### На потом
 #### Запуск определенного теста по тегу - !!!!??!?!?!?! под вопросом решение
 #### gradlew -Dcucumber.options="--tags @QA" clean cucumber

@@ -1,41 +1,32 @@
 package com.example;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-/*import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;*/
 import org.junit.runner.RunWith;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import exceptions.QAException;
-
-//import static cucumber.api.SnippetType.CAMELCASE;
+//import exceptions.QAException;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = "com.example",//Только имя пакета
         features = "src/test/resources/dira", //Основной
-        tags = "@QA",
-//        dryRun = false,
-//        snippets = CAMELCASE,
+//        tags = "@QA",
+        dryRun = false,
         snippets = CucumberOptions.SnippetType.CAMELCASE,//под зависимость import io.cucumber.junit.Cucumber;//import io.cucumber.junit.CucumberOptions;
         strict = true //Todo Подсказки
 //        name = "^Отображение.*"
-        /*(plugin =
-        {"pretty", "summary"},
-        snippets = CAMELCASE,
-        dryRun=true)*/
 )
 public class RunCucumberTest {
-    @BeforeClass
+    @Before
     public static void connectDB(){
-        System.out.println("BeforeClass");
-        throw new QAException("QAException_BeforeClass777");
+        System.out.println("Steps before starting");
+        //throw new QAException("QAException_Before");
     }
 
-    @AfterClass
+    @After
     public static void disconnectDB(){
-        System.out.println("AfterClass");
-        throw new QAException("QAException_AfterClass777");
+        System.out.println("Steps after starting");
+        //throw new QAException("QAException_After");
     }
 }
