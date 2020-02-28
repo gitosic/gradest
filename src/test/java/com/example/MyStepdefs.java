@@ -53,6 +53,7 @@ public class MyStepdefs {
     @Then("Шаг {int}")
     public void шаг(int arg0) {
         System.out.println("Шаг " + arg0);
+        //assertFalse("Тут ошибка", 1 != 2);
     }
 
     @When("Выполнить скрипт {string}, наполненияффф бд {string} запис с полем {string} = {string}")

@@ -14,6 +14,8 @@
 
 Полезные ссылки
 
+Gradle - Tasks - [https://www.tutorialspoint.com/gradle/gradle_tasks.htm]()
+
 Gradle – [Учебник Gradle](https://coderlessons.com/tutorials/raznoe/vyuchit-gradle/gradle-kratkoe-rukovodstvo)
 
 Инструкции по настройке запускатора ( ► ) - [https://cucumber.io/docs/cucumber/api/#from-the-command-line]()
@@ -34,6 +36,7 @@ https://cucumber.io/docs/installation/java/
 
 Таблица Alt-кодов - [https://htmlweb.ru/html/alt-codes.htm]()
 
+Для того, что бы появился стандартный отчет cucumber в такске "cucumber" нужно заменить 'pretty' на 'html:cucumber-html-report'
 
 The complete, and updated, instructions are availabe at the 
 [plugin portal](https://plugins.gradle.org/plugin/se.thinkcode.cucumber-runner).
