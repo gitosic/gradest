@@ -16,6 +16,7 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,//под зависимость import io.cucumber.junit.Cucumber;//import io.cucumber.junit.CucumberOptions;
         strict = true //Todo Подсказки
 //        name = "^Отображение.*"
+        //Прочитать todo --> http://java-online.ru/blog-junit.xhtml
 )
 public class RunCucumberTest {
     @Before
