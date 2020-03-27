@@ -1,33 +1,28 @@
 package com.example;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-//import exceptions.QAException;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        glue = "com.example",//Только имя пакета
-        features = "src/test/resources/dira", //Основной
-//        tags = "@QA",
+        glue = "com.example",
+        features = "src/test/resources/features",
         dryRun = false,
-        snippets = CucumberOptions.SnippetType.CAMELCASE,//под зависимость import io.cucumber.junit.Cucumber;//import io.cucumber.junit.CucumberOptions;
-        strict = true //Todo Подсказки
-//        name = "^Отображение.*"
-        //Прочитать todo --> http://java-online.ru/blog-junit.xhtml
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        strict = true
+
 )
 public class RunCucumberTest {
-    @Before
-    public static void connectDB(){
+    @BeforeClass
+    public static void beforeSteps(){
         System.out.println("Steps before starting");
-        //throw new QAException("QAException_Before");
     }
 
-    @After
-    public static void disconnectDB(){
+    @AfterClass
+    public static void afterSteps(){
         System.out.println("Steps after starting");
-        //throw new QAException("QAException_After");
     }
 }
